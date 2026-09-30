@@ -1,0 +1,825 @@
+/* -----------------------------------------
+   VARIABLES & PALETTES DE COULEURS ENRICHIER
+   ----------------------------------------- */
+:root {
+    /* Mode Sombre - Tech, Profond & Lumineux */
+    --bg: #0b0f19;
+    --bg-soft: #161f32;
+    --card: rgba(22, 31, 50, 0.6);
+    --card-hover: rgba(30, 41, 67, 0.8);
+    --text: #f3f4f6;
+    --muted: #9ca3af;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(99, 102, 241, 0.4);
+    
+    /* Dégradés néons pour donner de l'éclat */
+    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --accent: #6366f1;
+    --accent-light: rgba(99, 102, 241, 0.1);
+    
+    --navbar-bg: rgba(11, 15, 25, 0.75);
+    --shadow: box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+}
+
+:root[data-theme="light"] {
+    /* Mode Clair - Lumineux, Épuré & Vibrant */
+    --bg: #f8fafc;
+    --bg-soft: #ffffff;
+    --card: rgba(255, 255, 255, 0.8);
+    --card-hover: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: rgba(0, 0, 0, 0.06);
+    --border-hover: rgba(99, 102, 241, 0.3);
+    
+    --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --accent: #4f46e5;
+    --accent-light: rgba(79, 70, 229, 0.08);
+    
+    --navbar-bg: rgba(248, 250, 252, 0.8);
+    --shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.05), 0 8px 10px -6px rgba(79, 70, 229, 0.05);
+}
+
+/* Reset global amélioré */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.3s ease;
+    font-size: 16px;
+}
+
+/* Utilitaires */
+.section {
+    padding: 100px 8% 60px 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 2.5rem;
+}
+
+/* -----------------------------------------
+   BARRE DE NAVIGATION (Effet flouté de verre)
+   ----------------------------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--navbar-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar .logo {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: monospace;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--text);
+}
+
+.theme-toggle {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    transform: scale(1.05);
+}
+
+/* -----------------------------------------
+   SECTION HERO (Éclairée et attractive)
+   ----------------------------------------- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Halo de lumière en arrière-plan */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 350px;
+    height: 350px;
+    background: var(--accent-gradient);
+    filter: blur(140px);
+    opacity: 0.15;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 99px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 3rem;
+}
+
+/* Boutons au look moderne */
+.btn {
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.btn.primary {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.25);
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(99, 102, 241, 0.35);
+}
+
+.btn.secondary {
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn.secondary:hover {
+    background: var(--bg-soft);
+    border-color: var(--accent);
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials a {
+    font-size: 1.5rem;
+    color: var(--muted);
+    transition: color 0.2s, transform 0.2s;
+}
+
+.socials a:hover {
+    color: var(--text);
+    transform: translateY(-2px);
+}
+
+/* -----------------------------------------
+   A PROPOS & GRIDS
+   ----------------------------------------- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.info-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.info-box p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* -----------------------------------------
+   SECTION STAGE (Cartes lumineuses et Stats)
+   ----------------------------------------- */
+.stage-card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 24px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bordure supérieure d'accentuation */
+.stage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent-gradient);
+}
+
+.stage-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.date {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+.missions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.missions span {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+/* Compteurs de Statistiques Choc */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.stat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-hover);
+}
+
+.stat-value {
+    font-size: 2.25rem;
+    font-weight: 800;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+/* Réalisations (Achievements) */
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.achievement {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.achievement:hover {
+    border-color: var(--border-hover);
+    background: var(--card-hover);
+}
+
+.achievement-num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    opacity: 0.6;
+}
+
+.achievement h4 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.achievement p {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+/* -----------------------------------------
+   GRILLE DES PROJETS (Effet de profondeur)
+   ----------------------------------------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 24px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-hover);
+    background: var(--card-hover);
+    box-shadow: var(--shadow);
+}
+
+.project-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.project-status {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+.status-done {
+    background: var(--accent-light);
+    color: var(--accent);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project-card ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.project-card ul li {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.project-card ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--bg);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+}
+
+/* -----------------------------------------
+   TABLEAU DE SYNTHÈSE (Look Épuré & Académique)
+   ----------------------------------------- */
+.comp-table {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.comp-row {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 0.8fr;
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.comp-row:last-child {
+    border-bottom: none;
+}
+
+.comp-head {
+    background: rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    color: var(--text);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+:root[data-theme="light"] .comp-head {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.comp-date {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+/* -----------------------------------------
+   BADGES DE COMPÉTENCES & TIMELINE
+   ----------------------------------------- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.skill:hover {
+    border-color: var(--accent);
+    background: var(--bg-soft);
+    transform: translateY(-2px);
+}
+
+/* Frise Chronologique */
+.timeline {
+    border-left: 2px solid var(--border);
+    padding-left: 30px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -41px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 4px solid var(--accent);
+}
+
+.timeline-item h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.timeline-item p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* -----------------------------------------
+   FORMULAIRE DE CONTACT
+   ----------------------------------------- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent);
+    background: var(--bg-soft);
+    box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.contact-form button {
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    background: var(--accent-gradient);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* -----------------------------------------
+   RESPONSIVE DESIGN (Adaptation mobile propre)
+   ----------------------------------------- */
+@media (max-width: 1024px) {
+    .projects-grid,
+    .achievements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar nav {
+        display: none; /* Cache les liens de nav sur mobile pour simplifier */
+    }
+    
+    .hero h1 {
+        font-size: 2.75rem;
+    }
+    
+    .about-grid,
+    .contact-grid,
+    .projects-grid,
+    .achievements,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .comp-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 20px;
+    }
+    
+    .comp-head {
+        display: none; /* Cache l'en-tête du tableau sur mobile */
+    }
+    
+    .section {
+        padding: 80px 6% 40px 6%;
+    }
+}
+
+/* ─── ALIGNEMENT ET STRUCTURE DU TABLEAU DE SYNTHÈSE (AÉRÉ) ─── */
+.table-excel-container {
+    width: 100%;
+    overflow-x: auto; /* Défilement horizontal si l'écran est trop petit */
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--bg-soft);
+    box-shadow: var(--shadow);
+    margin-top: 30px;
+}
+
+.tableau-final {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1250px; /* Légèrement augmenté pour laisser le texte s'étaler */
+}
+
+/* Espacement global des cellules */
+.tableau-final th, 
+.tableau-final td {
+    padding: 28px 24px; /* Augmenté à 28px haut/bas pour un rendu très espacé */
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.6; /* Donne du souffle aux longues descriptions */
+}
+
+/* En-têtes du tableau */
+.tableau-final th {
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 22px 20px;
+}
+
+:root[data-theme="light"] .tableau-final th {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.tableau-final tr:last-child td {
+    border-bottom: none;
+}
+
+/* Alignements et largeurs des colonnes textuelles */
+.tableau-final .align-gauche {
+    text-align: left;
+}
+
+.tableau-final .col-titre {
+    text-align: left;
+    font-weight: 500;
+    width: 42%; /* Largeur confortable pour éviter les retours à la ligne trop brusques */
+}
+
+.tableau-final .col-date {
+    text-align: left;
+    color: var(--muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    width: 13%;
+}
+
+/* Style des cases cochées 'X' */
+.tableau-final .case-x {
+    font-weight: 900;
+    color: #6366f1;
+    background: rgba(99, 102, 241, 0.08);
+    font-size: 1.15rem;
+}
+
+:root[data-theme="light"] .tableau-final .case-x {
+    background: rgba(99, 102, 241, 0.04);
+}

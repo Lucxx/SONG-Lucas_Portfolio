@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas SONG | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="#accueil" class="logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        Lucas SONG
+    </a>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#stage">Stage</a>
+        <a href="#projets">Projets</a>
+        <a href="#competences-bts">Compétences BTS</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème" title="Changer de thème">
+        <i class='bx bx-moon'></i>
+    </button>
+</header>
+
+<main>
+
+<section id="accueil" class="hero">
+    <div class="hero-content">
+        <h1>LUCAS SONG</h1>
+        <p class="badge">Disponible pour une alternance</p>
+        <p class="hero-subtitle">Développeur full stack & logiciels</p>
+        <p class="hero-text">
+            Étudiant en BTS SIO SLAM, je développe des applications web,
+            des outils d'automatisation et des solutions connectées à des API.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projets" class="btn primary">Voir mes projets</a>
+            <a href="#contact" class="btn secondary">Me contacter</a>
+        </div>
+
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/lucas-song-34a686399/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://gitlab.com/xofar" target="_blank"><i class='bx bxl-gitlab'></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <p class="section-label">Présentation</p>
+    <h2>À propos de moi</h2>
+
+    <div class="about-grid">
+        <div>
+            <p>
+                Je m'appelle <strong>Lucas SONG</strong>, étudiant en BTS SIO option SLAM à l'IPSSI Val d'Europe.
+                Je m'intéresse au développement logiciel, aux bases de données, à l'automatisation et aux API.
+            </p>
+            <p>
+                Lors de mon stage chez METM, j'ai travaillé sur des outils internes liés au e-commerce,
+                notamment l'analyse Amazon FBA, la gestion de catalogues produits et l'automatisation
+                de traitements de données.
+            </p>
+        </div>
+
+        <div class="info-box">
+            <p><strong>Formation :</strong> BTS SIO SLAM</p>
+            <p><strong>École :</strong> IPSSI Val d'Europe</p>
+            <p><strong>Localisation :</strong> Lognes, France</p>
+            <p><strong>Email :</strong> l.song@ecole-ipssi.net</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <p class="section-label">Parcours</p>
+    <h2>Formation</h2>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>BTS SIO SLAM</h3>
+            <p>IPSSI Val d'Europe · 2025 - 2027</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Classe préparatoire CPGE-PCSI</h3>
+            <p>Lycée Paul Éluard · septembre à octobre 2025</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Baccalauréat général</h3>
+            <p>Lycée Emily Brontë · 2022 - 2025</p>
+        </div>
+    </div>
+</section>
+
+<section id="stage" class="section">
+    <p class="section-label">Expérience professionnelle</p>
+    <h2>Stage chez METM</h2>
+
+    <div class="stage-card">
+        <div>
+            <h3>Développeur Python / Automatisation e-commerce</h3>
+            <p class="date">27 Avril 2026 - 26 Juin 2026</p>
+        </div>
+
+        <p>
+            METM est une entreprise spécialisée dans le e-commerce qui fait du reconditionnement et revente de matériel informatique en ligne sur les places de marché internationales (Amazon, Cdiscount, Back Market, eBay).
+        </p>
+
+        <div class="missions">
+            <span>Python</span>
+            <span>Amazon SP-API</span>
+            <span>MySQL</span>
+            <span>Excel automatisé</span>
+            <span>Traitement batch</span>
+            <span>API REST</span>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat">
+            <span class="stat-value">8 000+</span>
+            <span class="stat-label">produits traités</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">16</span>
+            <span class="stat-label">marketplaces couverts</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">×20</span>
+            <span class="stat-label">requêtes API réduites</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value">120 000+</span>
+            <span class="stat-label">lignes générées</span>
+        </div>
+    </div>
+
+    <div class="achievements">
+        <div class="achievement">
+            <span class="achievement-num">01</span>
+            <div>
+                <h4>Fiabilisation du pipeline existant</h4>
+                <p>
+                    Correction des incohérences entre statuts catalogue et statuts fees, du calcul du ROI
+                    lorsque le coût d'achat est absent, et du parsing des réponses API qui retournait
+                    des valeurs nulles malgré un appel réussi.
+                </p>
+            </div>
+        </div>
+
+        <div class="achievement">
+            <span class="achievement-num">02</span>
+            <div>
+                <h4>Système de fallback à trois niveaux</h4>
+                <p>
+                    Mise en place d'une cascade de secours pour garantir qu'aucun produit ne reste sans
+                    estimation de frais : appel API en mode FBA, puis FBM, puis estimation locale basée
+                    sur la grille tarifaire officielle Amazon FBA Europe.
+                </p>
+            </div>
+        </div>
+
+        <div class="achievement">
+            <span class="achievement-num">03</span>
+            <div>
+                <h4>Extension à 16 marketplaces internationaux</h4>
+                <p>
+                    Extension du pipeline pour couvrir 16 marketplaces Amazon avec conversion automatique des devises et adaptation aux particularités de chaque marketplace.
+                </p>
+            </div>
+        </div>
+
+        <div class="achievement">
+            <span class="achievement-num">04</span>
+            <div>
+                <h4>Optimisation des performances API</h4>
+                <p>
+                    Passage d'un appel par produit par marketplace à des requêtes groupées de 20
+                    identifiants via l'endpoint searchCatalogItems, réduisant le volume de requêtes
+                    de 120 000 à environ 6 500. Parallélisation par marketplace et gestion d'un
+                    rate limiter respectant la limite Amazon de 2 requêtes par seconde.
+                </p>
+            </div>
+        </div>
+
+        <div class="achievement">
+            <span class="achievement-num">05</span>
+            <div>
+                <h4>Export automatisé multi-fichiers</h4>
+                <p>
+                    Génération d'un fichier Excel mis en forme par marketplace directement exploitable par les équipes.
+                </p>
+            </div>
+        </div>
+
+        <div class="achievement">
+            <span class="achievement-num">06</span>
+            <div>
+                <h4>Script de test et de démonstration</h4>
+                <p>
+                    Création d'un outil autonome affichant en détail un appel API réel (catalogue
+                    puis frais) pour un produit donné, utile au débogage et à la présentation du
+                    fonctionnement de l'outil.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projets" class="section">
+    <p class="section-label">Réalisations</p>
+    <h2>Mes projets</h2>
+
+    <div class="projects-grid">
+
+        <article class="project-card">
+            <span class="project-icon">📊</span>
+            <span class="project-status status-done">Réalisé en stage</span>
+            <h3>Amazon FBA Analyzer</h3>
+            <p>
+                Pipeline Python analysant automatiquement la rentabilité de 8 100 produits
+                sur 16 marketplaces Amazon, du catalogue jusqu'au calcul du ROI.
+            </p>
+            <ul>
+                <li>Intégration Amazon SP-API (catalogue + frais)</li>
+                <li>Calcul frais FBA, marge, ROI par marketplace</li>
+                <li>Export Excel automatisé multi-fichiers</li>
+            </ul>
+            <div class="project-tags">
+                <span>Python</span><span>MySQL</span><span>SP-API</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <span class="project-icon">🌍</span>
+            <span class="project-status status-done">Réalisé en stage</span>
+            <h3>Master API Marketplace</h3>
+            <p>
+                Réflexion sur une API centrale pour synchroniser les niveaux de stock entre
+                plusieurs marketplaces (Amazon, Cdiscount, Back Market, eBay) à partir d'une
+                base de données unique.
+            </p>
+            <ul>
+                <li>Modélisation d'une base de données centralisée</li>
+                <li>Logique de synchronisation multi-marketplaces</li>
+                <li>Étape suivante : endpoints de mise à jour en temps réel</li>
+            </ul>
+            <div class="project-tags">
+                <span>Python</span><span>MySQL</span><span>API REST</span>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <span class="project-icon">📚</span>
+            <span class="project-status status-done">Projet pédagogique</span>
+            <h3>Bibilyone</h3>
+            <p>
+                Site vitrine de bibliothèque développé en équipe, du cahier des charges
+                à la mise en production.
+            </p>
+            <ul>
+                <li>Gestion des rôles (utilisateur, bibliothécaire, admin)</li>
+                <li>Favoris, historique et notation par étoiles</li>
+                <li>Clean URLs via .htaccess</li>
+            </ul>
+            <div class="project-tags">
+                <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section id="competences-bts" class="section">
+    <p class="section-label">Tableau de synthèse</p>
+    <h2>Compétences mobilisées en stage</h2>
+
+    <div class="table-excel-container">
+        <table class="tableau-final">
+            <thead>
+                <tr>
+                    <th class="align-gauche">Réalisations professionnelles</th>
+                    <th class="align-gauche">Période</th>
+                    <th>Gérer le patrimoine</th>
+                    <th>Répondre aux incidents</th>
+                    <th>Présence en ligne</th>
+                    <th>Mode projet</th>
+                    <th>Mettre à disposition</th>
+                    <th>Développement prof.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-titre">Scraping Selenium pour récupérer les infos produits sur SellerAmp et insertion automatique en base de données MySQL</td>
+                    <td class="col-date">27/04/26 - 04/05/26</td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                </tr>
+                <tr>
+                    <td class="col-titre">Outil central de gestion des stocks multi-marketplaces (Amazon, Cdiscount, Back Market, eBay)</td>
+                    <td class="col-date">05/05/26 - 15/05/26</td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                    <td></td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                </tr>
+                <tr>
+                    <td class="col-titre">Développement et maintenance applicative : débogage et évolution du pipeline Python d'analyse de rentabilité Amazon FBA (correction ROI, parsing fees API)</td>
+                    <td class="col-date">16/05/26 - 26/06/26</td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                </tr>
+                <tr>
+                    <td class="col-titre">Gestion des bases de données : conception et exploitation de la base MySQL centralisant les données de 8 100 produits sur 16 marketplaces Amazon</td>
+                    <td class="col-date">16/05/26 - 26/06/26</td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                    <td></td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="col-titre">Réalisation de tests et validation applicative : création d'un script de test autonome pour valider les appels API (catalog et fees) avec affichage détaillé des requêtes/réponses</td>
+                    <td class="col-date">16/05/26 - 26/06/26</td>
+                    <td></td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="col-titre">Collaboration en mode projet : intégration dans l'équipe, échanges itératifs avec le responsable pour ajuster les besoins (multi-marketplaces, formats de sortie, performance)</td>
+                    <td class="col-date">16/05/26 - 26/06/26</td>
+                    <td></td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                    <td class="case-x">X</td>
+                </tr>
+                <tr>
+                    <td class="col-titre">Sécurisation applicative : gestion de l'authentification OAuth2 à l'API Amazon (tokens, refresh automatique, variables d'environnement)</td>
+                    <td class="col-date">16/05/26 - 26/06/26</td>
+                    <td class="case-x">X</td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                    <td></td>
+                    <td class="case-x">X</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="competences" class="section">
+    <p class="section-label">Savoir-faire</p>
+    <h2>Compétences</h2>
+
+    <div class="skills-grid">
+        <div class="skill">Python</div>
+        <div class="skill">PHP</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">HTML / CSS</div>
+        <div class="skill">Amazon SP-API</div>
+        <div class="skill">API REST</div>
+        <div class="skill">Git / GitLab</div>
+    </div>
+</section>
+
+<section class="section">
+    <p class="section-label">Certifications</p>
+    <h2>Certifications obtenues</h2>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Certificat Voltaire</h3>
+            <p>Certification en orthographe et maîtrise de la langue française</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Attestation CNIL</h3>
+            <p>Protection des données personnelles et conformité RGPD</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section contact-section">
+    <p class="section-label">Contact</p>
+    <h2>Me contacter</h2>
+
+    <div class="contact-grid">
+        <div class="contact-info">
+            <p>📍 Lognes, France</p>
+            <p>📧 l.song@ecole-ipssi.net</p>
+            <p>📞 +33 7 78 32 31 85</p>
+        </div>
+
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Clé d'accès Web3Forms -->
+            <input type="hidden" name="access_key" value="b2b7fdd6-14ea-4043-8302-c757dc4e6ef9">
+
+            <input type="text" name="nom" placeholder="Nom complet" required>
+            <input type="email" name="email" placeholder="Adresse email" required>
+            <input type="text" name="sujet" placeholder="Sujet" required>
+            <textarea name="message" rows="6" placeholder="Votre message..." required></textarea>
+
+            <!-- Champ anti-spam invisible -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    function applyTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        toggleBtn.innerHTML = theme === 'light'
+            ? "<i class='bx bx-sun'></i>"
+            : "<i class='bx bx-moon'></i>";
+        localStorage.setItem('theme', theme);
+    }
+
+    const saved = localStorage.getItem('theme');
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    applyTheme(saved || (prefersLight ? 'light' : 'dark'));
+
+    toggleBtn.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme');
+        applyTheme(current === 'light' ? 'dark' : 'light');
+    });
+</script>
+
+</body>
+</html>
