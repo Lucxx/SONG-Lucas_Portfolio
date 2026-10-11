@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas SONG | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
 
 <header class="navbar">
     <a href="#accueil" class="logo">
-        <span class="logo-icon">&lt;/&gt;</span>
-        Lucas SONG
+        Portfolio
     </a>
 
     <nav>
@@ -26,7 +27,7 @@
     </nav>
 
     <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème" title="Changer de thème">
-        <i class='bx bx-moon'></i>
+        Clair
     </button>
 </header>
 
@@ -34,9 +35,8 @@
 
 <section id="accueil" class="hero">
     <div class="hero-content">
-        <h1>LUCAS SONG</h1>
-        <p class="badge">Disponible pour une alternance</p>
-        <p class="hero-subtitle">Développeur full stack & logiciels</p>
+        <h1>Lucas<br><span>SONG</span></h1>
+        <p class="hero-subtitle">Développeur Full-stack</p>
         <p class="hero-text">
             Étudiant en BTS SIO SLAM, je développe des applications web,
             des outils d'automatisation et des solutions connectées à des API.
@@ -47,11 +47,38 @@
             <a href="#contact" class="btn secondary">Me contacter</a>
         </div>
 
+        <div class="hero-buttons docs">
+            <button type="button" class="btn secondary" data-pdf="assets/CV_Lucas_SONG.pdf" data-title="Mon CV">Voir mon CV</button>
+            <a href="assets/CV_Lucas_SONG.pdf" class="btn secondary" download="CV_Lucas_SONG.pdf">Télécharger mon CV</a>
+        </div>
+
         <div class="socials">
-            <a href="https://www.linkedin.com/in/lucas-song-34a686399/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://gitlab.com/xofar" target="_blank"><i class='bx bxl-gitlab'></i></a>
+            <a href="https://www.linkedin.com/in/lucas-song-34a686399/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Lucxx" target="_blank">GitHub</a>
         </div>
     </div>
+
+    <svg class="hero-orbit" viewBox="0 0 600 600" role="img" aria-label="Système orbital : PHP, Python, MySQL, JavaScript et API REST autour d'un soleil">
+        <defs>
+            <radialGradient id="sun">
+                <stop offset="0" style="stop-color:#fff3d6"/>
+                <stop offset="0.4" style="stop-color:var(--accent)"/>
+                <stop offset="1" style="stop-color:var(--accent);stop-opacity:0"/>
+            </radialGradient>
+        </defs>
+        <circle class="orb-ring" cx="300" cy="300" r="90"/>
+        <circle class="orb-ring orb-dash" cx="300" cy="300" r="150"/>
+        <circle class="orb-ring" cx="300" cy="300" r="215"/>
+        <circle class="orb-ring orb-dash" cx="300" cy="300" r="280"/>
+        <path class="orb-tick" d="M300 8v22M300 570v22M8 300h22M570 300h22"/>
+        <circle cx="300" cy="300" r="64" fill="url(#sun)"/>
+        <circle cx="300" cy="300" r="14" fill="#fff3d6"/>
+        <circle cx="215" cy="331" r="7" style="fill:var(--accent)"/><text class="orb-label" x="142" y="360">PHP</text>
+        <circle cx="423" cy="214" r="9" style="fill:var(--cyan)"/><text class="orb-label" x="440" y="206">Python</text>
+        <circle cx="114" cy="193" r="8" style="fill:var(--accent)"/><text class="orb-label" x="60" y="176">MySQL</text>
+        <circle cx="438" cy="465" r="8" style="fill:var(--cyan)"/><text class="orb-label" x="452" y="472">JavaScript</text>
+        <circle cx="440" cy="58" r="6" style="fill:var(--accent)"/><text class="orb-label" x="454" y="52">API REST</text>
+    </svg>
 </section>
 
 <section id="about" class="section">
@@ -283,95 +310,184 @@
 
 <section id="competences-bts" class="section">
     <p class="section-label">Tableau de synthèse</p>
-    <h2>Compétences mobilisées en stage</h2>
+    <h2>Compétences mises en œuvre</h2>
 
     <div class="table-excel-container">
-        <table class="tableau-final">
-            <thead>
-                <tr>
-                    <th class="align-gauche">Réalisations professionnelles</th>
-                    <th class="align-gauche">Période</th>
-                    <th>Gérer le patrimoine</th>
-                    <th>Répondre aux incidents</th>
-                    <th>Présence en ligne</th>
-                    <th>Mode projet</th>
-                    <th>Mettre à disposition</th>
-                    <th>Développement prof.</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="col-titre">Scraping Selenium pour récupérer les infos produits sur SellerAmp et insertion automatique en base de données MySQL</td>
-                    <td class="col-date">27/04/26 - 04/05/26</td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                </tr>
-                <tr>
-                    <td class="col-titre">Outil central de gestion des stocks multi-marketplaces (Amazon, Cdiscount, Back Market, eBay)</td>
-                    <td class="col-date">05/05/26 - 15/05/26</td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                    <td></td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                </tr>
-                <tr>
-                    <td class="col-titre">Développement et maintenance applicative : débogage et évolution du pipeline Python d'analyse de rentabilité Amazon FBA (correction ROI, parsing fees API)</td>
-                    <td class="col-date">16/05/26 - 26/06/26</td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                </tr>
-                <tr>
-                    <td class="col-titre">Gestion des bases de données : conception et exploitation de la base MySQL centralisant les données de 8 100 produits sur 16 marketplaces Amazon</td>
-                    <td class="col-date">16/05/26 - 26/06/26</td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                    <td></td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="col-titre">Réalisation de tests et validation applicative : création d'un script de test autonome pour valider les appels API (catalog et fees) avec affichage détaillé des requêtes/réponses</td>
-                    <td class="col-date">16/05/26 - 26/06/26</td>
-                    <td></td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="col-titre">Collaboration en mode projet : intégration dans l'équipe, échanges itératifs avec le responsable pour ajuster les besoins (multi-marketplaces, formats de sortie, performance)</td>
-                    <td class="col-date">16/05/26 - 26/06/26</td>
-                    <td></td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                    <td class="case-x">X</td>
-                </tr>
-                <tr>
-                    <td class="col-titre">Sécurisation applicative : gestion de l'authentification OAuth2 à l'API Amazon (tokens, refresh automatique, variables d'environnement)</td>
-                    <td class="col-date">16/05/26 - 26/06/26</td>
-                    <td class="case-x">X</td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                    <td></td>
-                    <td class="case-x">X</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+<table class="tableau-final">
+    <thead>
+        <tr>
+            <th class="align-gauche">Réalisations professionnelles <small>(intitulé et liste des documents et productions associés)</small></th>
+            <th class="align-gauche">Période</th>
+            <th>Gérer le patrimoine informatique
+                <details><summary>Détail</summary>
+                    <ul>
+                        <li>Recenser et identifier les ressources numériques</li>
+                        <li>Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</li>
+                        <li>Mettre en place et vérifier les niveaux d’habilitation associés à un service</li>
+                        <li>Vérifier les conditions de la continuité d’un service informatique</li>
+                        <li>Gérer des sauvegardes</li>
+                        <li>Vérifier le respect des règles d’utilisation des ressources numériques</li>
+                    </ul>
+                </details>
+            </th>
+            <th>Répondre aux incidents et aux demandes d’assistance et d’évolution
+                <details><summary>Détail</summary>
+                    <ul>
+                        <li>Collecter, suivre et orienter des demandes</li>
+                        <li>Traiter des demandes concernant les services réseau et système, applicatifs</li>
+                        <li>Traiter des demandes concernant les applications</li>
+                    </ul>
+                </details>
+            </th>
+            <th>Développer la présence en ligne de l’organisation
+                <details><summary>Détail</summary>
+                    <ul>
+                        <li>Participer à la valorisation de l’image de l’organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques</li>
+                        <li>Référencer les services en ligne de l’organisation et mesurer leur visibilité</li>
+                        <li>Participer à l’évolution d’un site Web exploitant les données de l’organisation</li>
+                    </ul>
+                </details>
+            </th>
+            <th>Travailler en mode projet
+                <details><summary>Détail</summary>
+                    <ul>
+                        <li>Analyser les objectifs et les modalités d’organisation d’un projet</li>
+                        <li>Planifier les activités</li>
+                        <li>Évaluer les indicateurs de suivi d’un projet et analyser les écarts</li>
+                    </ul>
+                </details>
+            </th>
+            <th>Mettre à disposition des utilisateurs un service informatique
+                <details><summary>Détail</summary>
+                    <ul>
+                        <li>Réaliser les tests d’intégration et d’acceptation d’un service</li>
+                        <li>Déployer un service</li>
+                        <li>Accompagner les utilisateurs dans la mise en place d’un service</li>
+                    </ul>
+                </details>
+            </th>
+            <th>Organiser son développement professionnel
+                <details><summary>Détail</summary>
+                    <ul>
+                        <li>Mettre en place son environnement d’apprentissage personnel</li>
+                        <li>Mettre en œuvre des outils et stratégies de veille informationnelle</li>
+                        <li>Gérer son identité professionnelle</li>
+                        <li>Développer son projet professionnel</li>
+                    </ul>
+                </details>
+            </th>
+        </tr>
+    </thead>
+
+        <tbody>
+            <tr>
+                <td class="col-titre">Projet BibiLyone - Développement d'un site web de bibliothèque en PHP, MySQL, HTML, CSS et JavaScript (Cahier des charges, base de données, code source GitLab).</td>
+                <td class="col-date">29/10/2025 au 28/02/2026</td>
+                <td></td>
+                <td></td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="col-titre">Projet RespireStat - Conception d'une architecture objet et développement d'algorithmes de calcul en Java (Documentation technique, code source GitLab).</td>
+                <td class="col-date">14/03/2026 au 14/04/2026</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td></td>
+            </tr>
+
+            <tr class="groupe"><td colspan="8">Réalisations en milieu professionnel en cours de première année</td></tr>
+
+            <tr>
+                <td class="col-titre">Conception d'un outil automatisé via Sellenium pour récupérer les informations des produits sur Seller AMP</td>
+                <td class="col-date">du 27/04/26 au 04/05/26</td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+            </tr>
+
+            <tr>
+                <td class="col-titre">Développement d'un outil central de gestion des stocks réunissant plusieurs marketplace ensemble</td>
+                <td class="col-date">du 05/05/26 au 15/05/26</td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="col-titre">Outil central de gestion des stocks multi-marketplaces</td>
+                <td class="col-date">05/05/26 au 15/05/26</td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+            </tr>
+
+            <tr>
+                <td class="col-titre">Développement et maintenance de solutions applicatives : développement et débogage du pipeline Python d'analyse de rentabilité Amazon FBA (correction des incohérences de statuts, du calcul ROI, du parsing des fees API)</td>
+                <td class="col-date">du 16/05/26 au 10/06/26</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="col-titre">Gestion des bases de données : conception et exploitation de la base MySQL centralisant les données de 8100 produits sur 16 marketplaces Amazon</td>
+                <td class="col-date">du 16/05/26 au 10/06/26</td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="col-titre">Réalisation de tests et validation des solutions : création d'un script de test autonome pour valider les appels API (catalog et fees) sur un produit unique, avec affichage détaillé des requêtes et réponses</td>
+                <td class="col-date">du 16/05/26 au 10/06/26</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="col-titre">Collaboration dans un projet informatique : intégration dans l'équipe pour faire évoluer un outil existant, échanges itératifs avec le responsable pour ajuster les besoins (multi-marketplaces, formats de sortie, performance)</td>
+                <td class="col-date">du 16/05/26 au 10/06/26</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="case-x" aria-label="Compétence mobilisée">X</td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr class="groupe"><td colspan="8">Réalisations en milieu professionnel en cours de seconde année</td></tr>
+        </tbody>
+</table>
+
+    </div>
+
+    <div class="doc-actions">
+        <button type="button" class="btn primary" data-pdf="assets/SONG Lucas-EPREUVE E5 TABLEAU DE SYNTHESE - BTS SIO 2026.pdf" data-title="Tableau de synthèse E5">Voir le tableau en PDF</button>
     </div>
 </section>
 
@@ -398,12 +514,12 @@
 
     <div class="timeline">
         <div class="timeline-item">
-            <h3>Certificat Voltaire</h3>
+            <h3>Certification Voltaire (746 points)</h3>
             <p>Certification en orthographe et maîtrise de la langue française</p>
         </div>
 
         <div class="timeline-item">
-            <h3>Attestation CNIL</h3>
+            <h3>MOOC Atelier RGPD – CNIL</h3>
             <p>Protection des données personnelles et conformité RGPD</p>
         </div>
     </div>
@@ -415,9 +531,9 @@
 
     <div class="contact-grid">
         <div class="contact-info">
-            <p>📍 Lognes, France</p>
-            <p>📧 l.song@ecole-ipssi.net</p>
-            <p>📞 +33 7 78 32 31 85</p>
+            <p>Lognes, France</p>
+            <p>l.song@ecole-ipssi.net</p>
+            <p>+33 7 78 32 31 85</p>
         </div>
 
         <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
@@ -439,15 +555,22 @@
 
 </main>
 
+<dialog id="viewer" class="viewer">
+    <div class="viewer-bar">
+        <h3 id="viewer-title"></h3>
+        <a id="viewer-open" href="#" target="_blank" rel="noopener">Ouvrir dans un onglet</a>
+        <button type="button" id="viewer-close" class="theme-toggle">Fermer</button>
+    </div>
+    <iframe id="viewer-frame" title="Document PDF"></iframe>
+</dialog>
+
 <script>
     const toggleBtn = document.getElementById('theme-toggle');
     const root = document.documentElement;
 
     function applyTheme(theme) {
         root.setAttribute('data-theme', theme);
-        toggleBtn.innerHTML = theme === 'light'
-            ? "<i class='bx bx-sun'></i>"
-            : "<i class='bx bx-moon'></i>";
+        toggleBtn.textContent = theme === 'light' ? 'Sombre' : 'Clair';
         localStorage.setItem('theme', theme);
     }
 
@@ -459,6 +582,48 @@
         const current = root.getAttribute('data-theme');
         applyTheme(current === 'light' ? 'dark' : 'light');
     });
+
+    // Parallaxe du fond : on convertit le scroll en une valeur --p (0 -> 1)
+    // avec un petit lissage pour que le mouvement soit fluide.
+    (function () {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        let target = 0, current = 0, ticking = false;
+
+        function readScroll() {
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            target = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+            if (!ticking) { ticking = true; requestAnimationFrame(update); }
+        }
+
+        function update() {
+            current += (target - current) * 0.1;           // lissage (inertie)
+            if (Math.abs(target - current) < 0.0005) current = target;
+            root.style.setProperty('--p', current.toFixed(4));
+            if (current !== target) requestAnimationFrame(update);
+            else ticking = false;
+        }
+
+        window.addEventListener('scroll', readScroll, { passive: true });
+        window.addEventListener('resize', readScroll);
+        readScroll();
+    })();
+
+    const viewer = document.getElementById('viewer');
+    const frame = document.getElementById('viewer-frame');
+
+    document.querySelectorAll('[data-pdf]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            frame.src = btn.dataset.pdf;
+            document.getElementById('viewer-title').textContent = btn.dataset.title;
+            document.getElementById('viewer-open').href = btn.dataset.pdf;
+            viewer.showModal();
+        });
+    });
+
+    document.getElementById('viewer-close').addEventListener('click', () => viewer.close());
+    viewer.addEventListener('click', e => { if (e.target === viewer) viewer.close(); });
+    viewer.addEventListener('close', () => frame.removeAttribute('src'));
 </script>
 
 </body>
