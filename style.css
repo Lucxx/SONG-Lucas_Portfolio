@@ -590,7 +590,7 @@ h2::after {
 /* ---------- Projets ---------- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 28px;
 }
 
@@ -1228,4 +1228,22 @@ body::before {
         radial-gradient(ellipse 52% 42% at 90% 30%, var(--neb-2), transparent 72%),
         radial-gradient(ellipse 58% 46% at 72% 92%, var(--neb-3), transparent 72%),
         radial-gradient(ellipse 44% 38% at 14% 88%, var(--neb-4), transparent 72%);
+}
+
+/* Projets : captures d'écran */
+.project-shot {
+    margin: 4px 0 22px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--panel-solid);
+}
+
+.project-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top left;
 }
